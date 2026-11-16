@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Review KUMUD Ghee on Google</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1F3D2B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#1F3D2B;--deep:#142A1E;--gold:#C8A24A;--gold-lt:#E8D49A;--cream:#F7F1E1;--paper:#FFFCF4;--ink:#1B241E;--mute:#55604f;--serif:"Young Serif",Georgia,serif;--sans:"Hind",system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+body{margin:0;font:400 1.0625rem/1.6 var(--sans);color:var(--ink);background:var(--paper);min-height:100vh}
+h1,h2{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(1.9rem,7vw,2.6rem)}h2{font-size:1.1rem;margin:0 0 .6rem}
+p{margin:0 0 1em}a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+header{background:var(--deep);color:var(--cream);padding:env(safe-area-inset-top,0) 0 0}
+header div{width:min(560px,100% - 2.5rem);margin-inline:auto;min-height:64px;display:flex;align-items:center;gap:.6rem}
+.logo{display:flex;align-items:center;gap:.6rem;font:1.5rem var(--serif);letter-spacing:.06em;text-decoration:none}
+.hero{background:var(--forest);color:var(--cream);padding:2rem 0 2.2rem}
+.hero p{color:#E4E8D8;margin:0}
+.wrap{width:min(560px,100% - 2.5rem);margin-inline:auto}
+main .wrap{padding:1.8rem 0 3rem}
+.seg{display:inline-flex;border:2px solid var(--gold);border-radius:999px;padding:3px;margin:0 0 1.4rem}
+.seg button{border:0;background:none;font:inherit;font-weight:600;padding:.2rem 1rem;border-radius:999px;cursor:pointer;color:var(--forest)}
+.seg button[aria-pressed=true]{background:var(--forest);color:var(--cream)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.3rem}
+.chips button{font:inherit;color:var(--forest);background:var(--cream);border:1.5px solid #bfb48c;border-radius:999px;padding:.3rem .9rem;cursor:pointer}
+.chips button:hover{border-color:var(--forest)}
+textarea{width:100%;min-height:190px;font:inherit;font-size:1.05rem;color:var(--ink);background:#fff;border:1.5px solid #bfb48c;border-left:5px solid var(--gold);border-radius:12px;padding:.9rem;resize:vertical}
+.go{display:block;width:100%;text-align:center;text-decoration:none;background:var(--gold);color:var(--deep);font-weight:600;padding:.9rem 1rem;border-radius:999px;border:2px solid var(--gold);margin-top:1rem}
+.go:hover{background:var(--gold-lt)}
+.note{color:var(--mute);font-size:.95rem;margin:1rem 0 0}
+.back{margin-top:2rem;text-align:center}.back a{color:var(--forest)}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0));transform:translateX(-50%);background:var(--ink);color:#fff;padding:.6rem 1rem;border-radius:10px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s;max-width:90vw;text-align:center}
+#toast.on{opacity:1}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div><a class="logo" href="https://www.kumudfarms.in/" aria-label="KUMUD website"><svg width="30" height="30" viewBox="0 0 40 40" fill="#C8A24A" aria-hidden="true"><ellipse cx="20" cy="14" rx="5" ry="11"/><ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(-38 20 32)"/><ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(38 20 32)"/><ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(-72 20 32)" opacity=".6"/><ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(72 20 32)" opacity=".6"/></svg>KUMUD</a></div></header>
+<section class="hero"><div class="wrap">
+<h1 id="h1">How was your KUMUD ghee?</h1>
+<p id="sub">Your honest review helps other Lucknow families choose. Write it in your own words.</p>
+</div></section>
+<main><div class="wrap">
+<div class="seg" role="group" aria-label="Language"><button type="button" id="en" aria-pressed="true">English</button><button type="button" id="hi" aria-pressed="false">Hinglish</button></div>
+<h2 id="ph">Not sure what to write? Tap a topic to add it.</h2>
+<div class="chips" id="chips"></div>
+<label for="txt" class="note" id="lbl" style="display:block;margin:0 0 .4rem">Your review</label>
+<textarea id="txt"></textarea>
+<a class="go" id="go" href="https://search.google.com/local/writereview?placeid=ChIJ1YNQP5P9mzkRlgJRVhqCzJo" target="_blank" rel="noopener">Copy my review and open Google</a>
+<p class="note" id="note">We copy your text before Google opens. On Google, choose your star rating, paste your review into the box and tap Post. Please review only if you have bought KUMUD ghee.</p>
+<p class="back"><a href="https://www.kumudfarms.in/">Back to kumudfarms.in</a></p>
+</div></main>
+<div id="toast" role="status"></div>
+<script>
+var T={
+en:{h1:"How was your KUMUD ghee?",sub:"Your honest review helps other Lucknow families choose. Write it in your own words.",ph:"Not sure what to write? Tap a topic to add it.",lbl:"Your review",go:"Copy my review and open Google",note:"We copy your text before Google opens. On Google, choose your star rating, paste your review into the box and tap Post. Please review only if you have bought KUMUD ghee.",toast:"Copied. Paste it in the review box on Google.",
+topics:["What I used it for","Taste and aroma","Texture and colour","Packaging and delivery","Would I order again"]},
+hi:{h1:"Aapko KUMUD ka ghee kaisa laga?",sub:"Aapka sachcha review Lucknow ke doosre parivaaron ki madad karta hai. Apne shabdon mein likhiye.",ph:"Kya likhein samajh nahi aa raha? Kisi topic par tap karein.",lbl:"Aapka review",go:"Review copy karke Google kholein",note:"Google khulne se pehle hum aapka text copy kar lete hain. Google par star rating chuniye, review box mein paste kijiye aur Post dabaiye. Review tabhi dijiye jab aapne KUMUD ghee kharida ho.",toast:"Copy ho gaya. Google ke review box mein paste kijiye.",
+topics:["Kis mein use kiya","Swaad aur khushboo","Texture aur rang","Packaging aur delivery","Dobara order karenge ya nahi"]}};
+var L="en",$=function(i){return document.getElementById(i)};
+function chips(){var b=$("chips");b.innerHTML="";T[L].topics.forEach(function(t){var x=document.createElement("button");x.type="button";x.textContent=t;x.onclick=function(){var a=$("txt"),v=a.value;if(v&&!/\n$/.test(v))v+="\n";a.value=v+t+": ";a.focus();a.setSelectionRange(a.value.length,a.value.length)};b.appendChild(x)})}
+function lang(l){L=l;var d=T[l];["h1","sub","ph","lbl","go","note"].forEach(function(k){$(k).textContent=d[k]});$("en").setAttribute("aria-pressed",l==="en");$("hi").setAttribute("aria-pressed",l==="hi");chips()}
+function copy(t){var a=document.createElement("textarea");a.value=t;a.setAttribute("readonly","");a.style.cssText="position:fixed;top:0;left:0;opacity:0";document.body.appendChild(a);a.select();try{document.execCommand("copy")}catch(e){}document.body.removeChild(a);try{if(navigator.clipboard)navigator.clipboard.writeText(t).catch(function(){})}catch(e){}}
+function toast(m){var t=$("toast");t.textContent=m;t.className="on";clearTimeout(toast.id);toast.id=setTimeout(function(){t.className=""},2600)}
+$("en").onclick=function(){lang("en")};$("hi").onclick=function(){lang("hi")};
+$("go").addEventListener("click",function(){var v=$("txt").value.trim();if(v){copy(v);toast(T[L].toast)}});
+chips();
+</script>
+</body>
+</html>
