@@ -1,76 +1,460 @@
 <!DOCTYPE html>
 <html lang="en-IN">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Review KUMUD Ghee on Google</title>
-<meta name="robots" content="noindex">
-<meta name="theme-color" content="#1F3D2B">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
-<style>
-:root{--forest:#1F3D2B;--deep:#142A1E;--gold:#C8A24A;--gold-lt:#E8D49A;--cream:#F7F1E1;--paper:#FFFCF4;--ink:#1B241E;--mute:#55604f;--serif:"Young Serif",Georgia,serif;--sans:"Hind",system-ui,-apple-system,"Segoe UI",sans-serif}
-*{box-sizing:border-box}
-body{margin:0;font:400 1.0625rem/1.6 var(--sans);color:var(--ink);background:var(--paper);min-height:100vh}
-h1,h2{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0 0 .5em}
-h1{font-size:clamp(1.9rem,7vw,2.6rem)}h2{font-size:1.1rem;margin:0 0 .6rem}
-p{margin:0 0 1em}a{color:inherit}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
-header{background:var(--deep);color:var(--cream);padding:env(safe-area-inset-top,0) 0 0}
-header div{width:min(560px,100% - 2.5rem);margin-inline:auto;min-height:64px;display:flex;align-items:center;gap:.6rem}
-.logo{display:flex;align-items:center;gap:.6rem;font:1.5rem var(--serif);letter-spacing:.06em;text-decoration:none}
-.hero{background:var(--forest);color:var(--cream);padding:2rem 0 2.2rem}
-.hero p{color:#E4E8D8;margin:0}
-.wrap{width:min(560px,100% - 2.5rem);margin-inline:auto}
-main .wrap{padding:1.8rem 0 3rem}
-.seg{display:inline-flex;border:2px solid var(--gold);border-radius:999px;padding:3px;margin:0 0 1.4rem}
-.seg button{border:0;background:none;font:inherit;font-weight:600;padding:.2rem 1rem;border-radius:999px;cursor:pointer;color:var(--forest)}
-.seg button[aria-pressed=true]{background:var(--forest);color:var(--cream)}
-.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.3rem}
-.chips button{font:inherit;color:var(--forest);background:var(--cream);border:1.5px solid #bfb48c;border-radius:999px;padding:.3rem .9rem;cursor:pointer}
-.chips button:hover{border-color:var(--forest)}
-textarea{width:100%;min-height:190px;font:inherit;font-size:1.05rem;color:var(--ink);background:#fff;border:1.5px solid #bfb48c;border-left:5px solid var(--gold);border-radius:12px;padding:.9rem;resize:vertical}
-.go{display:block;width:100%;text-align:center;text-decoration:none;background:var(--gold);color:var(--deep);font-weight:600;padding:.9rem 1rem;border-radius:999px;border:2px solid var(--gold);margin-top:1rem}
-.go:hover{background:var(--gold-lt)}
-.note{color:var(--mute);font-size:.95rem;margin:1rem 0 0}
-.back{margin-top:2rem;text-align:center}.back a{color:var(--forest)}
-#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0));transform:translateX(-50%);background:var(--ink);color:#fff;padding:.6rem 1rem;border-radius:10px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s;max-width:90vw;text-align:center}
-#toast.on{opacity:1}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <title>Review KUMUD Ghee</title>
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#1F3D2B">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Young+Serif&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --forest: #1F3D2B;
+            --deep: #142A1E;
+            --gold: #C8A24A;
+            --gold-lt: #E8D49A;
+            --cream: #F7F1E1;
+            --paper: #FFFCF4;
+            --ink: #1B241E;
+            --mute: #55604f;
+            --off: #d8d2bb;
+            --serif: "Young Serif", Georgia, serif;
+            --sans: "Hind", system-ui, -apple-system, "Segoe UI", sans-serif
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font: 400 1.0625rem/1.6 var(--sans);
+            color: var(--ink);
+            background: var(--paper);
+            min-height: 100vh
+        }
+
+        h1,
+        h2 {
+            font-family: var(--serif);
+            font-weight: 400;
+            line-height: 1.15;
+            margin: 0 0 .5em
+        }
+
+        h1 {
+            font-size: clamp(1.9rem, 7vw, 2.6rem)
+        }
+
+        h2 {
+            font-size: 1.05rem;
+            margin: 0 0 .5rem
+        }
+
+        h2 span {
+            color: var(--mute);
+            font-family: var(--sans);
+            font-size: .95rem
+        }
+
+        p {
+            margin: 0 0 1em
+        }
+
+        a {
+            color: inherit
+        }
+
+        [hidden] {
+            display: none !important
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--gold);
+            outline-offset: 3px
+        }
+
+        header {
+            background: var(--deep);
+            color: var(--cream);
+            padding-top: env(safe-area-inset-top, 0)
+        }
+
+        .wrap {
+            width: min(560px, 100% - 2.5rem);
+            margin-inline: auto
+        }
+
+        header .wrap {
+            min-height: 64px;
+            display: flex;
+            align-items: center
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            font: 1.5rem var(--serif);
+            letter-spacing: .06em;
+            text-decoration: none
+        }
+
+        .hero {
+            background: var(--forest);
+            color: var(--cream);
+            padding: 2rem 0 2.2rem
+        }
+
+        .hero p {
+            color: #E4E8D8;
+            margin: 0
+        }
+
+        main .wrap {
+            padding: 1.6rem 0 7.5rem
+        }
+
+        .seg {
+            display: inline-flex;
+            border: 2px solid var(--gold);
+            border-radius: 999px;
+            padding: 3px;
+            margin: 0 0 1.2rem
+        }
+
+        .seg button {
+            border: 0;
+            background: none;
+            font: inherit;
+            font-weight: 600;
+            padding: .2rem 1rem;
+            border-radius: 999px;
+            cursor: pointer;
+            color: var(--forest)
+        }
+
+        .seg button[aria-pressed=true] {
+            background: var(--forest);
+            color: var(--cream)
+        }
+
+        .hint {
+            color: var(--mute);
+            margin: 0 0 .6rem
+        }
+
+        .stars {
+            display: flex;
+            gap: .4rem;
+            margin: 0 0 1.4rem
+        }
+
+        .stars button {
+            border: 0;
+            background: none;
+            padding: 0;
+            font-size: 2.6rem;
+            line-height: 1;
+            color: var(--off);
+            cursor: pointer
+        }
+
+        .stars button.on {
+            color: var(--gold)
+        }
+
+        .sec {
+            margin: 0 0 1.3rem
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem
+        }
+
+        .chips button {
+            font: inherit;
+            color: var(--forest);
+            background: var(--cream);
+            border: 1.5px solid #bfb48c;
+            border-radius: 999px;
+            padding: .25rem .9rem;
+            cursor: pointer
+        }
+
+        .chips button[aria-pressed=true] {
+            background: var(--forest);
+            color: var(--cream);
+            border-color: var(--forest)
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 170px;
+            font: inherit;
+            font-size: 1.05rem;
+            color: var(--ink);
+            background: #fff;
+            border: 1.5px solid #bfb48c;
+            border-left: 5px solid var(--gold);
+            border-radius: 12px;
+            padding: .9rem;
+            resize: vertical
+        }
+
+        .go {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            background: var(--gold);
+            color: var(--deep);
+            font-weight: 600;
+            padding: .9rem 1rem;
+            border-radius: 999px;
+            border: 2px solid var(--gold);
+            margin-top: 1rem
+        }
+
+        .go:hover {
+            background: var(--gold-lt)
+        }
+
+        .bar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 30;
+            background: var(--paper);
+            border-top: 2px solid var(--gold);
+            padding: .7rem 0 calc(.7rem + env(safe-area-inset-bottom, 0))
+        }
+
+        .bar .in {
+            width: min(560px, 100% - 2.5rem);
+            margin-inline: auto
+        }
+
+        .bar .go {
+            margin-top: 0
+        }
+
+        .note {
+            color: var(--mute);
+            font-size: .95rem;
+            margin: 1rem 0 0
+        }
+
+        .back {
+            margin-top: 2rem;
+            text-align: center
+        }
+
+        .back a {
+            color: var(--forest)
+        }
+
+        #toast {
+            position: fixed;
+            left: 50%;
+            bottom: calc(92px + env(safe-area-inset-bottom, 0));
+            transform: translateX(-50%);
+            background: var(--ink);
+            color: #fff;
+            padding: .6rem 1rem;
+            border-radius: 10px;
+            font-weight: 600;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .2s;
+            max-width: 90vw;
+            text-align: center
+        }
+
+        #toast.on {
+            opacity: 1
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            * {
+                transition: none !important
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header><div><a class="logo" href="https://www.kumudfarms.in/" aria-label="KUMUD website"><svg width="30" height="30" viewBox="0 0 40 40" fill="#C8A24A" aria-hidden="true"><ellipse cx="20" cy="14" rx="5" ry="11"/><ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(-38 20 32)"/><ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(38 20 32)"/><ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(-72 20 32)" opacity=".6"/><ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(72 20 32)" opacity=".6"/></svg>KUMUD</a></div></header>
-<section class="hero"><div class="wrap">
-<h1 id="h1">How was your KUMUD ghee?</h1>
-<p id="sub">Your honest review helps other Lucknow families choose. Write it in your own words.</p>
-</div></section>
-<main><div class="wrap">
-<div class="seg" role="group" aria-label="Language"><button type="button" id="en" aria-pressed="true">English</button><button type="button" id="hi" aria-pressed="false">Hinglish</button></div>
-<h2 id="ph">Not sure what to write? Tap a topic to add it.</h2>
-<div class="chips" id="chips"></div>
-<label for="txt" class="note" id="lbl" style="display:block;margin:0 0 .4rem">Your review</label>
-<textarea id="txt"></textarea>
-<a class="go" id="go" href="https://search.google.com/local/writereview?placeid=ChIJ1YNQP5P9mzkRlgJRVhqCzJo" target="_blank" rel="noopener">Copy my review and open Google</a>
-<p class="note" id="note">We copy your text before Google opens. On Google, choose your star rating, paste your review into the box and tap Post. Please review only if you have bought KUMUD ghee.</p>
-<p class="back"><a href="https://www.kumudfarms.in/">Back to kumudfarms.in</a></p>
-</div></main>
-<div id="toast" role="status"></div>
-<script>
-var T={
-en:{h1:"How was your KUMUD ghee?",sub:"Your honest review helps other Lucknow families choose. Write it in your own words.",ph:"Not sure what to write? Tap a topic to add it.",lbl:"Your review",go:"Copy my review and open Google",note:"We copy your text before Google opens. On Google, choose your star rating, paste your review into the box and tap Post. Please review only if you have bought KUMUD ghee.",toast:"Copied. Paste it in the review box on Google.",
-topics:["What I used it for","Taste and aroma","Texture and colour","Packaging and delivery","Would I order again"]},
-hi:{h1:"Aapko KUMUD ka ghee kaisa laga?",sub:"Aapka sachcha review Lucknow ke doosre parivaaron ki madad karta hai. Apne shabdon mein likhiye.",ph:"Kya likhein samajh nahi aa raha? Kisi topic par tap karein.",lbl:"Aapka review",go:"Review copy karke Google kholein",note:"Google khulne se pehle hum aapka text copy kar lete hain. Google par star rating chuniye, review box mein paste kijiye aur Post dabaiye. Review tabhi dijiye jab aapne KUMUD ghee kharida ho.",toast:"Copy ho gaya. Google ke review box mein paste kijiye.",
-topics:["Kis mein use kiya","Swaad aur khushboo","Texture aur rang","Packaging aur delivery","Dobara order karenge ya nahi"]}};
-var L="en",$=function(i){return document.getElementById(i)};
-function chips(){var b=$("chips");b.innerHTML="";T[L].topics.forEach(function(t){var x=document.createElement("button");x.type="button";x.textContent=t;x.onclick=function(){var a=$("txt"),v=a.value;if(v&&!/\n$/.test(v))v+="\n";a.value=v+t+": ";a.focus();a.setSelectionRange(a.value.length,a.value.length)};b.appendChild(x)})}
-function lang(l){L=l;var d=T[l];["h1","sub","ph","lbl","go","note"].forEach(function(k){$(k).textContent=d[k]});$("en").setAttribute("aria-pressed",l==="en");$("hi").setAttribute("aria-pressed",l==="hi");chips()}
-function copy(t){var a=document.createElement("textarea");a.value=t;a.setAttribute("readonly","");a.style.cssText="position:fixed;top:0;left:0;opacity:0";document.body.appendChild(a);a.select();try{document.execCommand("copy")}catch(e){}document.body.removeChild(a);try{if(navigator.clipboard)navigator.clipboard.writeText(t).catch(function(){})}catch(e){}}
-function toast(m){var t=$("toast");t.textContent=m;t.className="on";clearTimeout(toast.id);toast.id=setTimeout(function(){t.className=""},2600)}
-$("en").onclick=function(){lang("en")};$("hi").onclick=function(){lang("hi")};
-$("go").addEventListener("click",function(){var v=$("txt").value.trim();if(v){copy(v);toast(T[L].toast)}});
-chips();
-</script>
+    <header>
+        <div class="wrap"><a class="logo" href="https://www.kumudfarms.in/" aria-label="KUMUD website"><svg width="30"
+                    height="30" viewBox="0 0 40 40" fill="#C8A24A" aria-hidden="true">
+                    <ellipse cx="20" cy="14" rx="5" ry="11" />
+                    <ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(-38 20 32)" />
+                    <ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(38 20 32)" />
+                    <ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(-72 20 32)" opacity=".6" />
+                    <ellipse cx="20" cy="14" rx="5" ry="11" transform="rotate(72 20 32)" opacity=".6" />
+                </svg>KUMUD</a></div>
+    </header>
+    <section class="hero">
+        <div class="wrap">
+            <h1>How was your experience?</h1>
+            <p>Buffalo ghee · Neil Lines, Cantonment, Lucknow</p>
+        </div>
+    </section>
+    <main>
+        <div class="wrap">
+            <div class="seg" role="group" aria-label="Review language"><button type="button" id="en"
+                    aria-pressed="true">English</button><button type="button" id="hi"
+                    aria-pressed="false">Hinglish</button></div>
+            <p class="hint" id="hint">Tap a star to get started</p>
+            <div class="stars" id="stars" role="group" aria-label="Rating"></div>
+            <div id="flow" hidden>
+                <div id="sections"></div>
+                <textarea id="txt" aria-label="Your review"></textarea>
+                <div class="bar">
+                    <div class="in"><a class="go" id="go"
+                            href="https://search.google.com/local/writereview?placeid=ChIJ1YNQP5P9mzkRlgJRVhqCzJo"
+                            target="_blank" rel="noopener">Copy review and open Google</a></div>
+                </div>
+                <p class="note" id="note">Your review is copied before Google opens. Edit it so it is true to your
+                    experience, and you choose what to post. On Google, tap the review box and choose
+                    <strong>Paste</strong>, then pick your stars and tap Post. Please review only if you have bought
+                    KUMUD ghee.</p>
+            </div>
+            <p class="back"><a href="https://www.kumudfarms.in/">Back to kumudfarms.in</a></p>
+        </div>
+    </main>
+    <div id="toast" role="status"></div>
+    <script>
+        var G = [
+            {
+                id: "ord", t: "Is this your first order?", multi: false, kind: "ord", items: [
+                    ["first", "First order", "This was my first order and it won’t be my last.", "Ye mera pehla order tha aur aakhri nahi hoga."],
+                    ["few", "Ordered 2 to 3 times", "I’ve ordered a few times now and the quality has stayed the same.", "Kai baar order kiya hai aur quality hamesha ek jaisi rahi."],
+                    ["reg", "Regular customer", "I’m a regular customer and the quality has never dropped.", "Hum regular customer hain aur quality kabhi kam nahi hui."]]
+            },
+            {
+                id: "use", t: "Where do you use it?", multi: true, kind: "use", items: [
+                    ["rotis", "Rotis and parathas", "rotis", "roti"], ["dal", "Dal and khichdi", "dal", "dal"], ["sabzi", "Sabzi and tadka", "sabzi", "sabzi"],
+                    ["sweet", "Sweets and halwa", "halwa", "halwa"], ["puja", "Puja and diyas", "puja", "puja"], ["rice", "Plain with rice", "rice", "chawal"], ["gift", "Gifting", "gifts", "gifting"]]
+            },
+            {
+                id: "ta", t: "How was the taste and aroma?", multi: true, kind: "det", items: [
+                    ["creamy", "Rich and creamy taste", "The taste is rich and creamy.", "Swaad rich aur creamy hai."],
+                    ["home", "Like homemade ghee", "It tastes just like homemade ghee.", "Swaad bilkul ghar ke ghee jaisa hai."],
+                    ["nutty", "Nutty aroma", "The nutty aroma is lovely.", "Khushboo nutty aur bahut acchi hai."],
+                    ["milky", "Fresh, milky aroma", "The aroma is fresh and milky.", "Khushboo taazi aur dudh jaisi hai."],
+                    ["kitchen", "Fills the kitchen", "The aroma fills the whole kitchen.", "Poora kitchen mehak jata hai."],
+                    ["natural", "Natural, nothing artificial", "It smells and tastes natural, nothing artificial.", "Swaad aur khushboo bilkul natural hai, kuch artificial nahi."],
+                    ["nolike", "Not to my taste", "The taste was not to my liking.", "Swaad mujhe pasand nahi aaya."]]
+            },
+            {
+                id: "tx", t: "How was the texture and colour?", multi: true, kind: "det", items: [
+                    ["grainy", "Grainy (danedar)", "The grainy texture is exactly how ghee should be.", "Danedar texture bilkul waisa hai jaisa ghee mein hona chahiye."],
+                    ["smooth", "Smooth and creamy", "The texture is smooth and creamy.", "Texture smooth aur creamy hai."],
+                    ["colour", "Natural colour", "The colour looks natural and unprocessed.", "Rang natural lagta hai, processed nahi."],
+                    ["scoop", "Easy to scoop", "It’s easy to scoop and use.", "Nikalna aur use karna aasan hai."],
+                    ["noexp", "Not what I expected", "The texture was not what I expected.", "Texture umeed jaisa nahi tha."]]
+            },
+            {
+                id: "tr", t: "What made you trust it?", multi: true, kind: "det", items: [
+                    ["pure", "Feels pure and fresh", "It feels pure and fresh.", "Shuddh aur taaza lagta hai."],
+                    ["batch", "Small-batch quality", "You can tell it’s made in small batches.", "Chhote batch mein bana hai, ye quality se pata chalta hai."],
+                    ["farm", "From a real dairy farm", "It comes straight from a real dairy farm.", "Seedha asli dairy farm se aata hai."],
+                    ["brand", "Honest, trustworthy brand", "KUMUD feels like an honest brand you can trust.", "KUMUD ek imaandaar brand lagta hai jis par bharosa kar sakte hain."]]
+            },
+            {
+                id: "pk", t: "How were the packaging and delivery?", multi: true, kind: "det", items: [
+                    ["jar", "Neat, sealed jar", "The jar was neat and properly sealed.", "Jar neat aur achhe se sealed tha."],
+                    ["leak", "No leakage", "There was no leakage at all.", "Koi leakage nahi tha."],
+                    ["safe", "Well protected in transit", "It was packed well and arrived safely.", "Achhe se pack tha aur safely pahuncha."],
+                    ["time", "On-time delivery", "Delivery was on time.", "Delivery time par mili."],
+                    ["giftpk", "Good for gifting", "The packaging is gift-worthy.", "Packaging gift dene layak hai."],
+                    ["late", "Delivery was late", "Delivery was late.", "Delivery der se mili."],
+                    ["badpk", "Packaging needs work", "The packaging needs improvement.", "Packaging mein sudhaar ki zaroorat hai."]]
+            },
+            {
+                id: "vd", t: "Overall, you would say…", multi: true, kind: "det", items: [
+                    ["value", "Worth the price", "Worth every rupee.", "Paisa vasool hai."],
+                    ["prem", "Premium quality", "Truly premium quality.", "Premium quality hai."],
+                    ["again", "Will order again", "Will definitely order again.", "Dobara zaroor order karenge."],
+                    ["rec", "Would recommend", "Happy to recommend it to family and friends.", "Parivaar aur doston ko recommend karenge."],
+                    ["dear", "A bit expensive", "It felt expensive to me.", "Mujhe thoda mehenga laga."],
+                    ["no", "Would not order again", "I would not order again.", "Dobara order nahi karenge."]]
+            }
+        ];
+        var O = {
+            en: ["", "I was disappointed with KUMUD ghee.", "I was not fully happy with KUMUD ghee.", "KUMUD ghee was okay for me.", "Very good ghee from KUMUD.", "Really happy with KUMUD ghee."],
+            hi: ["", "KUMUD ke ghee se main niraash hoon.", "KUMUD ke ghee se main poori tarah khush nahi hoon.", "KUMUD ka ghee mere liye theek tha.", "KUMUD ka ghee kaafi accha laga.", "KUMUD ka ghee bahut badhiya hai."]
+        };
+        var S = { lang: "en", rating: 0, dirty: false, sel: {} };
+        G.forEach(function (g) { S.sel[g.id] = g.multi ? {} : "" });
+        var $ = function (i) { return document.getElementById(i) };
+        function chosen(g) { return g.items.filter(function (it) { return g.multi ? S.sel[g.id][it[0]] : S.sel[g.id] === it[0] }) }
+        function join(a, w) { return a.length < 2 ? a.join("") : a.slice(0, -1).join(", ") + " " + w + " " + a[a.length - 1] }
+        function gen() {
+            if (S.dirty && $("txt").value.trim()) { toast(S.lang === "en" ? "Your edits are kept. Clear the box to rebuild from your choices." : "Aapke edits safe hain. Dobara banane ke liye box khaali kijiye."); return }
+            S.dirty = false;
+            if (!S.rating) { $("txt").value = ""; return }
+            var en = S.lang === "en", i = en ? 2 : 3, p = [O[S.lang][S.rating]];
+            G.forEach(function (g) {
+                var c = chosen(g); if (!c.length) return;
+                var t = c.map(function (it) { return it[i] });
+                if (g.kind === "use") p.push(en ? "We use it for " + join(t, "and") + "." : "Hum ise " + join(t, "aur") + " mein use karte hain.");
+                else p = p.concat(t);
+            });
+            $("txt").value = p.join(" ");
+        }
+        function sections() {
+            var box = $("sections"); box.innerHTML = "";
+            G.forEach(function (g) {
+                var w = document.createElement("div"); w.className = "sec";
+                var h = document.createElement("h2"); h.appendChild(document.createTextNode(g.t + " "));
+                var o = document.createElement("span"); o.textContent = "(optional)"; h.appendChild(o);
+                var c = document.createElement("div"); c.className = "chips"; var btns = [];
+                function refresh() { btns.forEach(function (x) { x.b.setAttribute("aria-pressed", g.multi ? !!S.sel[g.id][x.k] : S.sel[g.id] === x.k) }) }
+                g.items.forEach(function (it) {
+                    var b = document.createElement("button"); b.type = "button"; b.textContent = it[1];
+                    b.addEventListener("click", function () { var k = it[0]; if (g.multi) S.sel[g.id][k] = !S.sel[g.id][k]; else S.sel[g.id] = (S.sel[g.id] === k ? "" : k); refresh(); gen() });
+                    btns.push({ k: it[0], b: b }); c.appendChild(b);
+                });
+                refresh(); w.appendChild(h); w.appendChild(c); box.appendChild(w);
+            });
+        }
+        function stars() {
+            var box = $("stars"); box.innerHTML = "";
+            for (var i = 1; i <= 5; i++) {
+                (function (n) {
+                    var b = document.createElement("button"); b.type = "button"; b.textContent = "★"; b.setAttribute("aria-label", n + " star" + (n > 1 ? "s" : ""));
+                    if (n <= S.rating) b.className = "on";
+                    b.addEventListener("click", function () { S.rating = n; stars(); show() }); box.appendChild(b);
+                })(i)
+            }
+        }
+        function show() {
+            $("flow").hidden = false;
+            $("hint").textContent = S.lang === "en" ? "Pick whatever applies, as many as you like. We will draft a review from your choices, and you can edit it." : "Jo laage woh chuniye, jitne marzi. Hum aapke choices se review likh denge, aur aap use edit kar sakte hain.";
+            gen();
+        }
+        function copy(t) {
+            var a = document.createElement("textarea"); a.value = t; a.setAttribute("readonly", ""); a.style.cssText = "position:fixed;top:0;left:0;opacity:0";
+            document.body.appendChild(a); a.select(); a.setSelectionRange(0, t.length);
+            try { document.execCommand("copy") } catch (e) { } document.body.removeChild(a);
+            try { if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).catch(function () { }) } catch (e) { }
+        }
+        function toast(m) { var t = $("toast"); t.textContent = m; t.className = "on"; clearTimeout(toast.id); toast.id = setTimeout(function () { t.className = "" }, 2800) }
+        function setLang(l) { S.lang = l; $("en").setAttribute("aria-pressed", l === "en"); $("hi").setAttribute("aria-pressed", l === "hi"); if (S.rating) show() }
+        $("en").addEventListener("click", function () { setLang("en") });
+        $("hi").addEventListener("click", function () { setLang("hi") });
+        $("txt").addEventListener("input", function () { S.dirty = !!this.value.trim() });
+        $("go").addEventListener("click", function () { var v = $("txt").value.trim(); if (v) { copy(v); toast(S.lang === "en" ? "Copied. Paste it in the review box." : "Copy ho gaya. Review box mein paste kijiye.") } });
+        sections(); stars();
+    </script>
 </body>
+
 </html>
